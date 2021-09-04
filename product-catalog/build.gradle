@@ -13,6 +13,10 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	set('springCloudVersion', "2020.0.3")
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.4'
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-elasticsearch
@@ -21,10 +25,18 @@ dependencies {
 //	implementation group: 'org.springframework.data', name: 'spring-data-elasticsearch', version: '4.2.4'
 // https://mvnrepository.com/artifact/org.elasticsearch.client/elasticsearch-rest-high-level-client
 	implementation group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '7.14.1'
-
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch:2.4.0'
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.4'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
+	
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 test {

@@ -6,4 +6,4 @@ spring:
     config:
       server:
         git:
-          uri: https://
+          uri: https://github.com/Plepis80/aula-micro-servicos-config.git

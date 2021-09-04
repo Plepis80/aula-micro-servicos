@@ -24,7 +24,8 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	compile("redis.clients:jedis")
 
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test:2.5.4') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 }

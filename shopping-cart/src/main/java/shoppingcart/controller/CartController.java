@@ -1,7 +1,6 @@
 package shoppingcart.controller;
 
-import digitalinnovation.one.experts.shoppingcart.model.Cart;
-import digitalinnovation.one.experts.shoppingcart.model.Item;
+import shoppingcart.model.*;
 import shoppingcart.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
